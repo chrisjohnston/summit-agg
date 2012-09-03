@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <title>
+2012-08-31 - Linux Plumbers Conference 2012
+ | The Summit Scheduler</title>
+
+  <link rel="shortcut icon" href="http://www.linuxplumbersconf.org/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" type="text/css" media="all" href="//fonts.googleapis.com/css?family=Ubuntu" />
+  <link rel="stylesheet" type="text/css" href="/ubuntu-website/media/css/core-reset.css" />
+  <link rel="stylesheet" type="text/css" href="/ubuntu-website/media/css/core-grid.css" />
+  <link rel="stylesheet" type="text/css" href="/ubuntu-website/media/css/core.css" />
+  <link rel="stylesheet" type="text/css" href="/ubuntu-website/media/css/extra_styles.css" />
+  
+  <link rel="stylesheet" type="text/css" media="screen" href="/media/css/layout.css" /> 
+  <link rel="stylesheet" type="text/css" media="screen" href="/media/css/style.css" />  
+  <link rel="stylesheet" type="text/css" media="screen" href="/media/css/site.css" />
+
+
+  <script src="/ubuntu-website/media/js/modernizr.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.7.2.min.js"></script>
+  <script>window.jQuery || document.write('<script src="/ubuntu-website/media/js/jquery-1.7.2.min.js"><\/script>')</script>
+  <script>var website_assets="/ubuntu-website/media";</script>
+  <!--block extraheadjs left out by design, add other JS files to the loader.js script for async loading,
+      this is done and by design, if you MUST add a <script> tag do so in the closure block and test to ensure
+      no breakage has been caused, also avoid inline CSS and JS when possible, use /ubuntu-website/media/css/site.css
+      or /ubuntu-website/media/js/site.js so it correct headers are sent and can be cached properly by broswers-->
+  
+
+  <link rel="stylesheet" type="text/css" media="screen" href="/media/css/schedule.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="/ubuntu-website/media/css/schedule.css" />
+
+
+
+<script language="JavaScript">
+
+function timedRefresh()
+{
+    var timeoutPeriod = 5*60*1000; // 5 minutes
+	setTimeout("location.reload(true);", timeoutPeriod);
+}
+window.onload = timedRefresh;
+</script>
+
+
+<script type="text/javascript">
+function updateTimer() {
+    var secAgo = document.getElementById('refresh-time');
+    secAgo.innerHTML = Number(secAgo.innerHTML) + 1;
+}
+function starttimer() {
+    setInterval(updateTimer, 1000);
+}
+window.addEventListener('load', starttimer());
+</script>
+
+
+</head>
+<body>
+    <div class="wrapper">
+
+        
+            
+                <aside id="top-nav">
+                    <div class="container">
+                        <section id="top-login">
+                            
+    
+        <a class="top-login-item" href="/openid/login/?next=/lpc-2012/2012-08-31/display" title="Log In">Log in</a>
+    
+
+                        </section>
+                    </div>
+                </aside>
+            
+                <aside id="head">
+                    <div class="container">
+                        <h1 id="site-title"><span><a href="http://www.linuxplumbersconf.org/2012/" title="Linux Plumbers Conference 2012" rel="home">Linux Plumbers Conference 2012</a></span></h1>
+                        <div id="site-description">Just another WordPress site</div>
+                  </div>
+                </aside>
+            <header>
+                <nav role="navigation" class="nav-primary">
+                    
+    
+    
+    <ul class="clearfix">
+    
+        <li id="main-nav"><a class="main-nav-item" href="http://www.linuxplumbersconf.org/2012/" title="Blog">Blog</a></li>
+    
+        <li id="main-nav"><a class="main-nav-item" href="http://www.linuxplumbersconf.org/2012/participate/" title="Participate">Participate</a></li>
+    
+        <li id="main-nav"><a class="main-nav-item" href="http://summit.linuxplumbersconf.org/lpc-2012/" title="Schedule">Schedule</a></li>
+    
+        <li id="main-nav"><a class="main-nav-item" href="http://www.linuxplumbersconf.org/2012/attend/" title="Attend">Attend</a></li>
+    
+        <li id="main-nav"><a class="main-nav-item" href="http://www.linuxplumbersconf.org/2012/contact/" title="Contact">Contact</a></li>
+    
+        <li id="main-nav"><a class="main-nav-item" href="http://www.linuxplumbersconf.org/2012/faqs" title="FAQS">FAQS</a></li>
+    
+        <li id="main-nav"><a class="main-nav-item" href="http://summit.linuxplumbersconf.org/today/lpc-2012/" title="Today">Today</a></li>
+    
+    </ul>
+
+                </nav>
+            </header>
+
+            <div class="inner-wrapper">
+                
+                    <nav role="navigation" class="nav-secondary">
+                        <ul class="clearfix">
+                            
+
+    
+
+
+<li><a class="sub-nav-item" href="/lpc-2012.ical">iCal feed</a></li>
+
+<li><a class="sub-nav-item" href="/lpc-2012/2012-08-31/">List display</a></li>
+
+                        </ul>
+                    </nav>
+                    <!---->
+                
+        
+
+        
+    
+
+
+        
+    <div class="schedule-head">
+    
+        <img class="qrcode" src="http://chart.apis.google.com/chart?chl=http%3A%2F%2Fsummit.ubuntu.com%2Flpc-2012%2F&amp;chs=150x150&amp;cht=qr&amp;choe=UTF-8" width="150" height="150" alt="http://summit.ubuntu.com/lpc-2012/" />
+    
+    <span class="schedule-date">
+		<a href="/lpc-2012/2012-08-30/display?">&lt;</a> Friday <a href="/lpc-2012/2012-09-01/display?">&gt;</a></span>
+    
+    </div>
+
+<span class="last-updated" style="float: right;">Updated <span id="refresh-time">0</span> seconds ago</span><div style="clear: both;"></div><div class="calendar" style="width: 594px; background: white;">
+<div class="headings">
+<div class="heading" style="left: 0px">Nautilus 1</div>
+<div class="heading" style="left: 112px">Nautilus 2</div>
+<div class="heading" style="left: 224px">Nautilus 3</div>
+<div class="heading" style="left: 336px">Nautilus 4</div>
+<div class="heading" style="left: 448px">Nautilus 5</div>
+</div>
+<div class="grid">
+<div class="schedule"
+     style="width: 548px; min-width: 548px; min-height: 1450px; height: 1450px">
+<div id="meeting168"
+     class="meeting discussion lpc2012-cf warning"
+     style="top: 0px; min-height: 110px; height: 110px; width: 100px; background-color: #88ccaa; left: 0px">
+  <span class="time">Friday 08:15, Nautilus 1</span>
+  <span class="title"><a href="/lpc-2012/meeting/168/lpc2012-cf-pm-bof/">BoF: Power Management Constraints</a></span>
+  <span class="errortext">Required participants unavailable</span>
+  <ul class="tracks">
+    <li>constraints</li>  </ul>
+  <ul class="participants">
+    <li class="missing"><a href="http://launchpad.net/~glikely" title="Grant Likely">glikely</a></li>
+  </ul>
+</div>
+<div id="meeting165"
+     class="meeting discussion warning"
+     style="width: 100px; top: 0px; height: 110px; min-height: 110px; left: 112px">
+  <span class="time">Friday 08:15, Nautilus 2</span>
+  <span class="title"><a href="/lpc-2012/meeting/165/breakfast/">Breakfast</a></span>
+  <span class="errortext">Required participants unavailable</span>
+  <ul class="tracks">
+  </ul>
+  <ul class="participants">
+    <li class="missing"><a href="http://launchpad.net/~glikely" title="Grant Likely">glikely</a></li>
+  </ul>
+</div>
+<div id="meeting166"
+     class="meeting discussion warning"
+     style="width: 100px; top: 0px; height: 110px; min-height: 110px; left: 224px">
+  <span class="time">Friday 08:15, Nautilus 3</span>
+  <span class="title"><a href="/lpc-2012/meeting/166/breakfast/">Breakfast</a></span>
+  <span class="errortext">Required participants unavailable</span>
+  <ul class="tracks">
+  </ul>
+  <ul class="participants">
+    <li class="missing"><a href="http://launchpad.net/~glikely" title="Grant Likely">glikely</a></li>
+  </ul>
+</div>
+<div id="meeting167"
+     class="meeting discussion warning"
+     style="width: 100px; top: 0px; height: 110px; min-height: 110px; left: 336px">
+  <span class="time">Friday 08:15, Nautilus 4</span>
+  <span class="title"><a href="/lpc-2012/meeting/167/breakfast/">Breakfast</a></span>
+  <span class="errortext">Required participants unavailable</span>
+  <ul class="tracks">
+  </ul>
+  <ul class="participants">
+    <li class="missing"><a href="http://launchpad.net/~glikely" title="Grant Likely">glikely</a></li>
+  </ul>
+</div>
+<div id="meeting150"
+     class="meeting discussion"
+     style="width: 100px; top: 0px; height: 110px; min-height: 110px; left: 448px">
+  <span class="time">Friday 08:15, Nautilus 5</span>
+  <span class="title"><a href="/lpc-2012/meeting/150/breakfast/">Breakfast</a></span>
+  <ul class="tracks">
+  </ul>
+  <ul class="participants">
+  </ul>
+</div>
+<div id="meeting38"
+     class="meeting discussion lpc2012-ref"
+     style="top: 112px; min-height: 78px; height: 78px; width: 100px; background-color: #44aaaa; left: 0px">
+  <span class="time">Friday 09:10, Nautilus 1</span>
+  <span class="title"><a href="/lpc-2012/meeting/38/lpc2012-ref-social-eng/">Lubricating Kernel Plumbing with Social Engineering - James Bottomley</a></span>
+  <ul class="tracks">
+    <li>presentations</li>  </ul>
+</div>
+<div id="meeting110"
+     class="meeting discussion lpc2012-rt"
+     style="top: 112px; min-height: 298px; height: 298px; width: 100px; background-color: #4477aa; left: 112px">
+  <span class="time">Friday 09:10, Nautilus 2</span>
+  <span class="title"><a href="/lpc-2012/meeting/110/lpc2012-real-time-microconference/">Real Time Microconference</a></span>
+  <ul class="tracks">
+    <li>real time</li>  </ul>
+  <ul class="participants">
+    <li class="hide-attending"><a href="http://launchpad.net/~apm" title="Antti P Miettinen">apm</a></li>
+    <li class="hide-attending"><a href="http://launchpad.net/~paulmck" title="Paul McKenney">paulmck</a></li>
+    <li class="hide-attending"><a href="http://launchpad.net/~tglx" title="tglx">tglx</a></li>
+  </ul>
+</div>
+<div id="meeting87"
+     class="meeting discussion lpc2012-boot"
+     style="top: 112px; min-height: 78px; height: 78px; width: 100px; background-color: #77cccc; left: 224px">
+  <span class="time">Friday 09:10, Nautilus 3</span>
+  <span class="title"><a href="/lpc-2012/meeting/87/lpc2012-boot-petitboot/">Petitboot &amp;&amp; /boot Unification</a></span>
+  <ul class="tracks">
+    <li>core os</li>  </ul>
+</div>
+<div id="meeting126"
+     class="meeting discussion lpc2012-android"
+     style="top: 112px; min-height: 298px; height: 298px; width: 100px; background-color: #aa4455; left: 336px">
+  <span class="time">Friday 09:10, Nautilus 4</span>
+  <span class="title"><a href="/lpc-2012/meeting/126/lpc2012-android/">Android</a></span>
+  <ul class="tracks">
+    <li>android</li>  </ul>
+  <ul class="participants">
+    <li class="hide-attending"><a href="http://launchpad.net/~glikely" title="Grant Likely">glikely</a></li>
+    <li class="hide-attending"><a href="http://launchpad.net/~kir-openvz" title="Kir Kolyshkin">kir-openvz</a></li>
+    <li class="hide-attending"><a href="http://launchpad.net/~rsalveti" title="Ricardo Salveti">rsalveti</a></li>
+  </ul>
+</div>
+<div id="meeting68"
+     class="meeting discussion lpc2012-net"
+     style="top: 112px; min-height: 188px; height: 188px; width: 100px; background-color: #cc99bb; left: 448px">
+  <span class="time">Friday 09:10, Nautilus 5</span>
+  <span class="title"><a href="/lpc-2012/meeting/68/lpc2012-net-tc-shaping/">Classification/Shaping &amp;&amp; HW Rate Limiting &amp;&amp; Open-vswitch</a></span>
+  <ul class="tracks">
+    <li>networking</li>  </ul>
+</div>
+<div id="meeting29"
+     class="meeting discussion lpc2012-ref"
+     style="top: 222px; min-height: 78px; height: 78px; width: 100px; background-color: #44aaaa; left: 0px">
+  <span class="time">Friday 10:05, Nautilus 1</span>
+  <span class="title"><a href="/lpc-2012/meeting/29/lpc2012-ref-arm-arch-kernel-status/">Status of ARM - Arnd Bergmann</a></span>
+  <ul class="tracks">
+    <li>presentations</li>  </ul>
+</div>
+<div id="room2slot25"
+     class="slot open"
+     style="top: 222px; min-height: 78px; height: 78px; width: 100px; line-height: 78px; left: 112px">
+  <span class="title">10:05..10:50</span>
+</div>
+<div id="meeting51"
+     class="meeting discussion lpc2012-scale"
+     style="top: 222px; min-height: 78px; height: 78px; width: 100px; background-color: #44aa77; left: 224px">
+  <span class="time">Friday 10:05, Nautilus 3</span>
+  <span class="title"><a href="/lpc-2012/meeting/51/lpc2012-scale-asymmetric-smp/">ASMP: Improving performance through dedication of OS tasks to specific processors</a></span>
+  <ul class="tracks">
+    <li>scaling</li>  </ul>
+</div>
+<div id="room4slot25"
+     class="slot open"
+     style="top: 222px; min-height: 78px; height: 78px; width: 100px; line-height: 78px; left: 336px">
+  <span class="title">10:05..10:50</span>
+</div>
+<div id="room6slot25"
+     class="slot open"
+     style="top: 222px; min-height: 78px; height: 78px; width: 100px; line-height: 78px; left: 448px">
+  <span class="title">10:05..10:50</span>
+</div>
+<div id="room14slot24"
+     class="slot break"
+     style="top: 312px; min-height: 8px; height: 8px; width: 548px; line-height: 8px; left: 0px">
+  <span class="title">Break</span>
+</div>
+<div id="meeting39"
+     class="meeting discussion lpc2012-ref"
+     style="top: 332px; min-height: 78px; height: 78px; width: 100px; background-color: #44aaaa; left: 0px">
+  <span class="time">Friday 11:00, Nautilus 1</span>
+  <span class="title"><a href="/lpc-2012/meeting/39/lpc2012-ref-thermal-management/">Enhancing Thermal Management - R. Agarwal</a></span>
+  <ul class="tracks">
+    <li>presentations</li>  </ul>
+</div>
+<div id="room2slot26"
+     class="slot open"
+     style="top: 332px; min-height: 78px; height: 78px; width: 100px; line-height: 78px; left: 112px">
+  <span class="title">11:00..11:45</span>
+</div>
+<div id="meeting164"
+     class="meeting discussion"
+     style="width: 100px; top: 332px; height: 188px; min-height: 188px; left: 224px">
+  <span class="time">Friday 11:00, Nautilus 3</span>
+  <span class="title"><a href="/lpc-2012/meeting/164/lpc-strategic-planning-bof/">LPC Strategic Planning BoF</a></span>
+  <ul class="tracks">
+  </ul>
+  <ul class="participants">
+    <li class="hide-attending"><a href="http://launchpad.net/~chrisjohnston" title="Chris Johnston">chrisjohnston</a></li>
+  </ul>
+</div>
+<div id="room4slot26"
+     class="slot open"
+     style="top: 332px; min-height: 78px; height: 78px; width: 100px; line-height: 78px; left: 336px">
+  <span class="title">11:00..11:45</span>
+</div>
+<div id="room6slot26"
+     class="slot open"
+     style="top: 332px; min-height: 78px; height: 78px; width: 100px; line-height: 78px; left: 448px">
+  <span class="title">11:00..11:45</span>
+</div>
+<div id="meeting64"
+     class="meeting discussion lpc2012-boot"
+     style="top: 442px; min-height: 78px; height: 78px; width: 100px; background-color: #77cccc; left: 0px">
+  <span class="time">Friday 11:55, Nautilus 1</span>
+  <span class="title"><a href="/lpc-2012/meeting/64/lpc2012-boot-systemd-initramfs/">CoreOS: Initramfs Systemd &amp;&amp; libkmod</a></span>
+  <ul class="tracks">
+    <li>core os</li>  </ul>
+</div>
+<div id="room2slot27"
+     class="slot open"
+     style="top: 442px; min-height: 78px; height: 78px; width: 100px; line-height: 78px; left: 112px">
+  <span class="title">11:55..12:40</span>
+</div>
+<div id="room3slot27"
+     class="slot open"
+     style="top: 442px; min-height: 78px; height: 78px; width: 100px; line-height: 78px; left: 224px">
+  <span class="title">11:55..12:40</span>
+</div>
+<div id="meeting57"
+     class="meeting discussion lpc2012-cf"
+     style="top: 442px; min-height: 78px; height: 78px; width: 100px; background-color: #88ccaa; left: 336px">
+  <span class="time">Friday 11:55, Nautilus 4</span>
+  <span class="title"><a href="/lpc-2012/meeting/57/lpc2012-cf-tegra/">PM constraints: Tegra</a></span>
+  <ul class="tracks">
+    <li>constraints</li>  </ul>
+</div>
+<div id="meeting53"
+     class="meeting discussion lpc2012-scale"
+     style="top: 442px; min-height: 78px; height: 78px; width: 100px; background-color: #44aa77; left: 448px">
+  <span class="time">Friday 11:55, Nautilus 5</span>
+  <span class="title"><a href="/lpc-2012/meeting/53/lpc2012-scale-rcu-scalable-trie/">An RCU-protected scalable trie for user-mode use</a></span>
+  <ul class="tracks">
+    <li>scaling</li>  </ul>
+</div>
+<div id="room14slot28"
+     class="slot lunch"
+     style="top: 532px; min-height: 12px; height: 12px; width: 548px; line-height: 12px; left: 0px">
+  <span class="title">Lunch</span>
+</div>
+<div id="meeting135"
+     class="meeting discussion"
+     style="width: 100px; top: 612px; height: 188px; min-height: 188px; left: 0px">
+  <span class="time">Friday 14:10, Nautilus 1</span>
+  <span class="title"><a href="/lpc-2012/meeting/135/lpc2012-uefi-open-discussion/">UEFI Open Discussion</a></span>
+  <ul class="tracks">
+  </ul>
+  <ul class="participants">
+    <li class="hide-attending"><a href="http://launchpad.net/~glikely" title="Grant Likely">glikely</a></li>
+    <li class="hide-attending"><a href="http://launchpad.net/~srwarren" title="Stephen Warren">srwarren</a></li>
+  </ul>
+</div>
+<div id="room2slot30"
+     class="slot open"
+     style="top: 612px; min-height: 78px; height: 78px; width: 100px; line-height: 78px; left: 112px">
+  <span class="title">14:10..14:55</span>
+</div>
+<div id="meeting113"
+     class="meeting discussion lpc2012-virt"
+     style="top: 612px; min-height: 188px; height: 188px; width: 100px; background-color: #aa4488; left: 224px">
+  <span class="time">Friday 14:10, Nautilus 3</span>
+  <span class="title"><a href="/lpc-2012/meeting/113/lpc2012-virt-vfio/">Network Virtualization and Lightning Talks</a></span>
+  <ul class="tracks">
+    <li>virtualization</li>  </ul>
+</div>
+<div id="room4slot30"
+     class="slot open"
+     style="top: 612px; min-height: 78px; height: 78px; width: 100px; line-height: 78px; left: 336px">
+  <span class="title">14:10..14:55</span>
+</div>
+<div id="meeting88"
+     class="meeting discussion lpc2012-boot"
+     style="top: 612px; min-height: 78px; height: 78px; width: 100px; background-color: #77cccc; left: 448px">
+  <span class="time">Friday 14:10, Nautilus 5</span>
+  <span class="title"><a href="/lpc-2012/meeting/88/lpc2012-boot-systemd/">Systemd for the User Session</a></span>
+  <ul class="tracks">
+    <li>core os</li>  </ul>
+</div>
+<div id="room1slot32"
+     class="slot open"
+     style="top: 722px; min-height: 78px; height: 78px; width: 100px; line-height: 78px; left: 0px">
+  <span class="title">15:05..15:50</span>
+</div>
+<div id="meeting71"
+     class="meeting discussion lpc2012-sched"
+     style="top: 722px; min-height: 78px; height: 78px; width: 100px; background-color: #aaaa44; left: 112px">
+  <span class="time">Friday 15:05, Nautilus 2</span>
+  <span class="title"><a href="/lpc-2012/meeting/71/lpc2012-sched-deadline/">Application of deadline scheduling for powersaving strategies</a></span>
+  <ul class="tracks">
+    <li>scheduler</li>  </ul>
+</div>
+<div id="room3slot32"
+     class="slot open"
+     style="top: 722px; min-height: 78px; height: 78px; width: 100px; line-height: 78px; left: 224px">
+  <span class="title">15:05..15:50</span>
+</div>
+<div id="meeting130"
+     class="meeting discussion"
+     style="width: 100px; top: 722px; height: 78px; min-height: 78px; left: 336px">
+  <span class="time">Friday 15:05, Nautilus 4</span>
+  <span class="title"><a href="/lpc-2012/meeting/130/unavailable-2/">Unavailable</a></span>
+  <ul class="tracks">
+  </ul>
+  <ul class="participants">
+  </ul>
+</div>
+<div id="meeting131"
+     class="meeting discussion error"
+     style="width: 100px; top: 722px; height: 78px; min-height: 78px; left: 448px">
+  <span class="time">Friday 15:05, Nautilus 5</span>
+  <span class="title"><a href="/lpc-2012/meeting/131/unavailable-1/">Unavailable</a></span>
+  <span class="errortext">Room is not available</span>
+  <ul class="tracks">
+  </ul>
+  <ul class="participants">
+  </ul>
+</div>
+<div id="room14slot31"
+     class="slot break"
+     style="top: 812px; min-height: 8px; height: 8px; width: 548px; line-height: 8px; left: 0px">
+  <span class="title">Break</span>
+</div>
+<div id="meeting4"
+     class="meeting plenary"
+     style="width: 548px; top: 832px; height: 108px; min-height: 108px; left: 0px">
+  <span class="time">Friday 16:00, Nautilus 4/5</span>
+  <span class="title"><a href="/lpc-2012/meeting/4/lpc2012-plenary-closing/">LPC Closing Discussion</a></span>
+  <span class="room">Nautilus 4/5 (400)</span>
+  <ul class="tracks">
+  </ul>
+  <ul class="participants">
+  </ul>
+</div>
+<div id="meeting12"
+     class="meeting plenary"
+     style="width: 548px; top: 1072px; height: 348px; min-height: 348px; left: 0px">
+  <span class="time">Friday 18:00, Offsite</span>
+  <span class="title"><a href="/lpc-2012/meeting/12/evening-event-el-vitral/">Closing Party @ El Vitral</a></span>
+  <span class="room">Offsite</span>
+  <ul class="tracks">
+  </ul>
+</div>
+</div>
+<div class="marker"
+     style="top: 0px; height: 108px">
+  08:15
+</div>
+<div class="marker"
+     style="top: 120px; height: 12px">
+  09:15
+</div>
+<div class="marker"
+     style="top: 112px; height: 78px">
+  09:10
+</div>
+<div class="marker"
+     style="top: 200px; height: 12px">
+  09:55
+</div>
+<div class="marker"
+     style="top: 222px; height: 78px">
+  10:05
+</div>
+<div class="marker"
+     style="top: 310px; height: 12px">
+  10:50
+</div>
+<div class="marker"
+     style="top: 330px; height: 12px">
+  11:00
+</div>
+<div class="marker"
+     style="top: 420px; height: 12px">
+  11:45
+</div>
+<div class="marker"
+     style="top: 442px; height: 78px">
+  11:55
+</div>
+<div class="marker"
+     style="top: 530px; height: 12px">
+  12:40
+</div>
+<div class="marker"
+     style="top: 610px; height: 12px">
+  14:10
+</div>
+<div class="marker"
+     style="top: 700px; height: 12px">
+  14:55
+</div>
+<div class="marker"
+     style="top: 722px; height: 78px">
+  15:05
+</div>
+<div class="marker"
+     style="top: 810px; height: 12px">
+  15:50
+</div>
+<div class="marker"
+     style="top: 830px; height: 12px">
+  16:00
+</div>
+<div class="marker"
+     style="top: 950px; height: 12px">
+  17:00
+</div>
+<div class="marker"
+     style="top: 1072px; height: 348px">
+  18:00
+</div>
+<div class="marker"
+     style="top: 1430px; height: 12px">
+  21:00
+</div>
+<div class="headings">
+<div class="heading" style="left: 0px">Nautilus 1</div>
+<div class="heading" style="left: 112px">Nautilus 2</div>
+<div class="heading" style="left: 224px">Nautilus 3</div>
+<div class="heading" style="left: 336px">Nautilus 4</div>
+<div class="heading" style="left: 448px">Nautilus 5</div>
+</div>
+</div>
+</div>
+
+
+
+
+        
+
+<style>
+.box {
+ padding: 20px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+ border-radius: 4px;
+ border: 1px solid #aea79f;
+}
+</style>
+<div class="span-12">
+ <div class="box">
+  <p><p><strong><em> PLEASE NOTE </em></strong> The Linux Plumbers Conference 2012 schedule is subject to changes at any time.</p></p>
+ </div>
+</div>
+
+
+
+
+        </div><!-- div.inner-wrapper -->
+
+        
+
+        <footer class="clear">
+            <div class="container">
+                    <p class="logo-ubuntu">Powered by <a href="http://juju.ubuntu.com">Juju</a> on <a href="http://www.ubuntu.com">Ubuntu</a></p>
+
+               
+    <div class="copyright">
+        <p>&copy;  Canonical Ltd., Ubuntu Community.</p>
+        <p>Ubuntu and Canonical are registered trademarks of <a href="http://www.canonical.com">Canonical Ltd</a>.</p>
+        <p>Problems with Summit? <a href="https://bugs.launchpad.net/summit/+filebug">File a Bug &rsaquo;</a></p>
+        <p>Summit version 1.2.0 (rev 436)</p>
+    </div>
+
+                </div>
+        </footer>
+
+        
+
+    <script>
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <script src="/ubuntu-website/media/js/loader.js"></script>
+    <!--[if lt IE 9]>
+        <script src="/ubuntu-website/media/js/polyfills/IE9/IE9.js">IE7_PNG_SUFFIX=".png";</script>
+        <script src="/ubuntu-website/media/js/polyfills/IE9/squish.js"></script>
+    <![endif]-->
+    
+</div>
+</body>
+</html>

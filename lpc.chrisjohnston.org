@@ -1,0 +1,8 @@
+<VirtualHost *:80>
+  ServerName lpc.chrisjohnston.org
+  ServerAdmin chrisjohnston@ubuntu.com
+  DocumentRoot /srv/lpc.chrisjohnston.org/sched/
+
+  ErrorLog /var/log/apache2/lpc-error.log
+  CustomLog /var/log/apache2/lpc-access.log combined
+</VirtualHost>
